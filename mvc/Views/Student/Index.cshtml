@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+@using mvc.Models
+@model Student
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>
+        @{
+            var s = DateTime.Now.ToString();
+            s = s + " hour";
+           
+        }
+    </h1>
+   
+    <h1>@s</h1>
+    @Html.ActionLink("Return Home","Index","Home")
+    <form action="/Student/Addstudent2 " method="post">
+        <div> id:<input id="ID" /></div>
+        <div> name:<input name="name" /></div>
+        <button type="submit">create</button>
+    </form>
+    <div>
+        <h1>Đây là trang web đầu tien của SV</h1>
+    </div>
+    <button>Show message</button>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.getScript("/Student/WarningMessage");
+            })
+        })
+    </script>
+    <h1>
+        @if (Model != null)
+        {
+            <h1>@Model.Name</h1>
+        }
+    </h1>
+</body>
+</html>

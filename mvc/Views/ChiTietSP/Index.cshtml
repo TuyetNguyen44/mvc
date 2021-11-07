@@ -1,0 +1,153 @@
+﻿
+<div id="main-product" ng-app="CustomerApp" >
+    <div class="product-detail" >
+        <div class="img-product">
+            <div class="img-up">
+                <img src="~/image/vi.jpg" id="anh-goc"></img>
+            </div>
+            <div class="img-down">
+                <img src="~/image/viden.jpg" onclick="ChangeImg('anh1')" id="anh1"></img>
+                <img src="~/image/vihong.jpg" onclick="ChangeImg('anh2')" id="anh2"></img>
+                <img src="~/image/vitrang.jpg" onclick="ChangeImg('anh3')" id="anh3"></img>
+                <img src="~/image/vĩanh.jpg" onclick="ChangeImg('anh4')" id="anh4"></img>
+            </div>
+        </div>
+        <div class="inf-pro" ng-controller="DetailProduct" >
+            <h2  class="proc-name">{{sp.TenSp}}</h2>
+            <div class="re-pro">
+                <div class="star-pro">
+                    <div class="star">
+                        <p>4.9</p>
+                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="review-pro">
+                    <p>504 đánh giá</p>
+                </div>
+                <div class="sell-pro">
+                    <p>1,2k Đã bán</p>
+                </div>
+            </div> <br>
+            <label class="cost-pro">95.000đ</label>
+            <div class="color">
+                <p style="color: #ccc;font-size: 18px;"><b> Màu sắc:</b></p>
+                <ul>
+                    <li class="color-item" onclick="ChangeImg('anh1')" id="anh1">Đen</li>
+                    <li class="color-item" onclick="ChangeImg('anh2')" id="anh2">Hồng</li>
+                    <li class="color-item" onclick="ChangeImg('anh3')" id="anh3">Trắng</li>
+                    <li class="color-item" onclick="ChangeImg('anh4')" id="anh4">Xanh</li>
+                </ul>
+            </div><br>
+            <div class="amount-pro">
+                <h4>Số lượng:</h4>
+                <div class="product-amount ">
+                    <input onclick='subAmount("txt2")' class="btn-sub" type="button" value="-" />
+                    <input id='txt2' class="txt-amount" type="text" value="1" />
+                    <input onclick='plusAmount("txt2")' class="btn-plus" type="button" value="+" />
+                </div>
+
+            </div>
+            <input class="btn-or-pro" type="button" value="Thêm vào giỏ hàng" />
+            <input class="btn-buy" type="button" value="Mua ngay" onclick="location='./payment.html'" />
+        </div>
+    </div>
+    <div class="store">
+        <div class="name-store">
+            <div class="img-store">
+                <img src="~/image/practice1.2.jpg" alt="">
+            </div>
+            <div class="st">
+                <div class="name-st">nguyentuyet44</div>
+                <div class="online-st">Online 2 giờ trước</div> <br>
+                <input class="btn-chat-st" type="button" value="Chat ngay" />
+                <input class="btn-st" type="button" value="Xem shop" />
+
+            </div>
+        </div>
+        <div class="info-store">
+            <div class="info-st">
+                <label class="st-p">Đánh giá</label>
+                <span class="st-span">1,3k</span> <br> <br>
+                <label class="st-p">Sản phẩm</label>
+                <span class="st-span">363</span>
+
+            </div>
+            <div class="info-st2">
+                <label class="st-p">Tỉ lệ phản hồi</label>
+                <span class="st-span">96%</span> <br> <br>
+                <label class="st-p">Thời gian phản hồi</label>
+                <span class="st-span">Trong vài giờ</span>
+
+            </div>
+            <div class="info-st3">
+                <label class="st-p">Tham gia</label>
+                <span class="st-span">11 tháng trước</span> <br> <br>
+                <label class="st-p">Người theo dõi</label>
+                <span class="st-span">450</span>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="product-des">
+        <div class="de-product">
+            <h3 style="color: rgb(94, 94, 240);">CHI TIẾT SẢN PHẨM</h3>
+            <div id="table">
+                <table cellspacing='0' cellpadding='4'>
+                    <tr>
+                        <th class="row">Thương hiệu</th>
+                    </tr>
+                    <tr>
+                        <th class="row">Kích thước</th>
+                    </tr>
+                    <tr>
+                        <th class="row">Xuất xứ</th>
+                    </tr>
+                    <tr>
+                        <th class="row">Chất liệu</th>
+                    </tr>
+                    <tr>
+                        <th class="row">Gửi từ</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="table2">
+                <table class="table2" cellspacing='0' cellpadding='4'>
+                    <tr>
+                        <th class="row">No Brand</th>
+                    </tr>
+                    <tr>
+                        <th class="row line">12 cmx15 cm</th>
+                    </tr>
+                    <tr>
+                        <th class="row">Việt Nam</th>
+                    </tr>
+                    <tr>
+                        <th class="row line">Da</th>
+                    </tr>
+                    <tr>
+                        <th class="row">Huyện Thanh Trì,Hà Nội</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="descrip-pro">
+            <h3 style="color: rgb(94, 94, 240)">MÔ TẢ SẢN PHẨM</h3>
+            <p>
+                Ví cầm tay luôn là một phụ kiện không thể thiếu của nhiều cô gái, bởi sự tiện ích và tính thời trang mà nó mang lại cho người sử dụng.
+                Chúng tôi thường xuyên cập nhật những mẫu ví da gấp mới từ kiểu dáng đến chất lượng... nhằm giúp khách hàng lựa chọn được những sản phẩm
+                đẹp, chất lượng phù hợp với nhu cầu và sở thích của mình một cách dễ dàng.
+            </p>
+            <img src="~/image/vi.jpg" alt="">
+            <p>
+                Gía sản phẩm đã bảo gồm thuế theo luật hiện hành.Tùy nhiên tùy vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể
+                phát sinh thêm các chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh.Cảm ơn quý khách đã tin tưởng và lựa chọn sản phẩm của cửa hàng.
+            </p>
+        </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+    </div>

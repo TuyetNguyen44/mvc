@@ -1,0 +1,201 @@
+﻿<html>
+<head>
+    <title>Văn phòng phẩm</title>
+    <link rel="stylesheet" type="text/css" href="~/css/supllies.css" />
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style type="text/css">
+        body {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="name-shop">
+            <img src="~/image/logo.png" alt="" onclick="location='./book.html'" style="cursor: pointer;">
+        </div>
+        <div class="account">
+            <a href="./login.html">
+                <label class="account-label">Tài khoản</label>
+                <img class="account-icon" src="~/image/account.png" />
+
+            </a>
+        </div>
+     
+    </div>
+    <div id="nav">
+        <div id="menu">
+            <ul ng-controller="MenuController">
+                <li ng-repeat="l i listCatogery">
+                    <a href=".SanPham/Index">{{l.MaLoai}}</a>
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#">Dụng cụ học tập</a></li>
+                        <li><a href="#">Sổ vở</a></li>
+                        <li><a href="#">Stcker/Giấy note</a></li>
+                        <li><a href="#">Lịch</a></li>
+
+                    </ul>
+                </li>
+                @*<li>
+                    <a href="#">Qùa lưu niệm</a>
+                    <ul>
+                        <li><a href="#"> Đồng hồ</a></li>
+                        <li><a href="#">Gấu bông</a></li>
+                        <li><a href="#">Sổ tay</a></li>
+                        <li><a href="#">Đồ handmade</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Đồ dùng văn phòng khác</a>
+                    <ul>
+                        <li> <a href="#">Giấy A4</a></li>
+                        <li><a href="#">Mực </a></li>
+                        <li><a href="#">Bút</a></li>
+                        <li><a href="#">Kẹp tài liệu</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./sach.html">Sách-Vở</a>
+                    <ul>
+                        <li><a href="#">Sách giáo khoa</a></li>
+                        <li><a href="#">Sách tham khảo</a></li>
+                        <li><a href="#">Sách ngoại ngữ</a></li>
+                        <li><a href="#">Sách về cuộc sống</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Đồ chơi</a>
+                    <ul>
+                        <li><a href="#">Đồ chơi</a></li>
+                        <li><a href="#">Đồ thú cưng</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Phụ kiện/Tiện ích</a>
+                    <ul>
+                        <li><a href="#">Phụ kiện điện thoại</a></li>
+                        <li><a href="#">Phụ kiện trang sức</a></li>
+                        <li><a href="#">Tiện ích</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Túi ví/Gấu bông</a>
+                    <ul>
+                        <li><a href="#">Túi đeo</a></li>
+                        <li><a href="#">Balo</a></li>
+                        <li><a href="#">Ví</a></li>
+                        <li><a href="#">Túi đa năng</a></li>
+                    </ul>
+
+                </li>*@
+
+
+            </ul ng-controller="MenuController">
+        </div>
+    </div>
+
+   @RenderBody();   
+
+
+    <div id="footer">
+        <div class="col-3 col-m-4 col-m-2 col-s-6">
+            <div class="contact">
+                <h4>TRỢ GIÚP</h4>
+                <hr>
+                <ul style="list-style: none;">
+                    <li>Giới thiệu </li>
+                    <br />
+                    <li>Chính sách đổi trả </li>
+                    <br />
+                    <li>Chính sách bảo mật thông tin khách hàng</li>
+                    <br />
+                    <li>Quy định thanh toán và vận chuyển </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="col-3 col-m-4 col-m-2 col-s-6">
+            <div class="other_contact">
+                <div class="contact1">
+                    <div class="Shipping">
+                        <img src="~/image/shopbag.png">
+                    </div>
+                    <div class="shipping-content">
+                        <h4>Miễn phí giao hàng</h4>
+                        <p>Freeship cho đơn từ 300K</p>
+                    </div>
+                </div>
+                <div class="contact2">
+                    <div class="Shipping">
+                        <img src="~/image/ship.png">
+                    </div>
+                    <div class="shipping-content">
+                        <h4>Giao Hàng Nhanh Chóng</h4>
+                        <p>Giao hàng trong vòng 2h kể từ khi đặt hàng</p>
+                    </div>
+                </div>
+                <div class="contact3">
+                    <div class="Shipping">
+                        <img src="~/image/assistant.png">
+                    </div>
+                    <div class="shipping-content">
+                        <h4>Hỗ Trợ 24/7</h4>
+                        <p>Hỗ trợ, tư vấn giải đáp thắc mắc cho khách hàng miễn phí 24/7</p>
+                    </div>
+                </div>
+                <div class="contact4">
+                    <div class="Shipping">
+                        <img src="~/image/warranty.png">
+                    </div>
+                    <div class="shipping-content">
+                        <h4>Bảo Hành Chính Hãng</h4>
+                        <p>Sản phẩm được bảo hành chính hãng đổi trả nhanh chóng.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-3 col-m-4 col-m-2 col-s-6">
+
+        <div class="assist">
+            <h4>THÔNG TIN LIÊN HỆ</h4>
+            <hr>
+            <p>Holine:</p>
+            <p>0395897920</p>
+            <p>Email:</p>
+            <p>ocsenshop@gmai.com</p>
+            <p>Facebook fanpage:</p>
+            <p>Ocsenshop</p>
+            <p>Số ĐKKD: 01D8032318 - Ngày Cấp: 04/04/2017</p>
+        </div>
+
+    </div>
+    <div class="col-3 col-m-4 col-m-2 col-s-6">
+        <div class="address">
+            <h4>ĐỊA CHỈ</h4>
+            <hr>
+            <h4>Cửa hàng OCEAN</h4>
+            <p>Website:</p>
+            <p>WWW.OCSENSHOP.COM</p>
+            <p>Địa chỉ:</p>
+            <p>Số 156 Tân Lập,Huyện Yên Mỹ,Tỉnh Hưng Yên</p>
+
+        </div>
+
+    </div>
+    </div>
+    <script src="~/./order-sp.js"></script>
+    <script src="~/./jssupplies.js"></script>
+    <script>
+		AutoPlay();
+    </script>
+</body>
+
+</html>

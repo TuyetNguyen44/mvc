@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="slides">
+    <div class="slide-show">
+        <img id="slide" src="~/image/./1.jpg" style="width: 100%;height: 500px;margin: auto;" />
+        <img onclick="Next()" style="position: absolute;top:265px;right: 170px;" />
+        <img onclick="Back()" style="position: absolute;top:265px;left: 175px" />
+    </div>
+    <div class="btn-slides">
+        <input class="btn-slide prev" type="button" value="&#10092;">
+        <input class="btn-slide next" type="button" value="&#10093;">
+    </div>
+</div>
+<div id="content">
+    <div id="search"></div>
+    <div id="main">
+        <div class=head style="width: 100%;height: 55px; display: flex;">
+            <h2 style="text-align: left;height: 80px;width: 250px;">Sản phẩm nổi bật</h2>
+            <div class="sort" style="height: 55px;width: 150px;padding-top: 15px;padding-left: 740px;">
+                <select name="sort-price" id="sort-price" style="height:35px;width:150px;">
+                    <option value="0" selected="selected">Giá</option>
+                    <option value="1">Từ cao đến thấp</option>
+                    <option value="2">Từ thấp đến cao</option>
+                </select>
+            </div>
+        </div>
+        <div class="list-product">
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='0' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Ví da gập 3 khóa bấm động vật </a>
+                    Gía cũ:<label><s s class="product-old-price">105.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">95.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT"
+                           onclick="location='./ProductDetail.html'"> </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='1' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Bút Donald & Daisy</a>
+                    Gía cũ:<label><s class="product-old-price">25.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">15.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT" onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='2' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Heo bông mặc áo</a>
+                    Gía cũ:<label><s class="product-old-price">200.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">160.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT" onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='3' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Bút bò sữa</a>
+                    Gía cũ:<label><s class="product-old-price">35.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">20.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT " onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='4' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Sổ bìa cứng A5</a>
+                    Gía cũ:<label><s class="product-old-price">65.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">55.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT " onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='5' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Polette Sticker</a>
+                    Gía cũ:<label><s class="product-old-price">25.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">18.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT" onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='6' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Note vuông gấu bông</a>
+                    Gía cũ:<label><s class="product-old-price">15.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">12.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT " onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='7' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Thông thỏ </a>
+                    Gía cũ:<label><s class="product-old-price">185.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">160.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT" onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='8' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Totebag động vật nền trắng </a>
+                    Gía cũ:<label><s class="product-old-price">115.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">100.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT" onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='9' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Sổ gáy xoắn A5 (68tr) </a>
+                    Gía cũ:<label><s class="product-old-price">60.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">48.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT" onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='10' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Sổ bìa cứng</a>
+                    Gía cũ:<label><s class="product-old-price">70.000 đ</s></label> <br>
+                    Gía khuyến mại:<label class="price">50.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT" onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+            </div>
+            <div class="col-3 col-m-6 col-s-12">
+                <div id='11' class="product">
+                    <img class="product-img" src="~/Image/book1.jpg" />
+                    <a href="#" class="product-name">Sổ kẻ ngang A5 72 trang</a>
+                    Gía cũ:<label><s class="product-old-price">50.000 đ</s></label> </br>
+                    Gía khuyến mại:<label class="price">100.000 đ</label>
+                    <input type="button" class="btn-buy" value="CHỌN MUA"></input>
+                    <input type="button " class="btn-view" value="CHI TIẾT" onclick="location='./ProductDetail.html'">
+                    </input>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+

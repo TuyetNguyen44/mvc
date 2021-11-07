@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div id="main" ng-app="CustomerApp">
+
+        @*<div class=head style="width: 100%;height: 55px; display: flex;">
+            <div class="sort" style="height: 55px;width: 150px;padding-top: 15px;padding-left: 740px;">
+                <select name="sort-price" id="sort-price" style="height:35px;width:150px;" ng-model="sortcolumn">
+                    <option value="TenSP">Tên sản phẩm</option>
+                    <option value="MaSP" selected="selected">Mã sản phẩm</option>
+                </select>
+            </div>
+            <div>
+                Sorting direction:
+                <input type="button" value="{{dr}}" ng-click="Chon(dr)" />
+            </div>
+
+
+        </div>*@
+
+
+        @*<div style="width:25%;height:35px; color: #6E573D; position: relative">
+            <label style="padding-left:20px;line-height: 40px; font-size: 25px"><b>GỢI Ý CHO BẠN</b></label>
+        </div>*@
+        @*<div style='width: 30%;height: 2.5px; background-color: #6E573D; margin-left:20px; '></div>*@
+        <div class="list-product"  ng-controller="SanPhamController">
+            <div class="col-3 col-m-6 col-s-12" ng-repeat="s in ListSanPham">
+                <div id='0' class="product">
+                    <a ng-click="" href="/ChiTietSP/Index">
+                        <img class="product-img" src="https://picsum.photos/200/300" />
+                    </a>
+                    <a href="#" class="product-name">{{s.TenSp}}</a>
+                    <input type='button' class='btn-buy' value='CHỌN MUA' />
+                    <input type="button" class="btn-view" value="CHI TIẾT"
+                           onclick="location='./ProductDetail.html'" />
+                </div>
+            </div>    
+        </div>
+</div>

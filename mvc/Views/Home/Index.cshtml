@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="slides">
+    <div class="slide-show">
+        <img id="slide" src="~/image/./1.jpg" style="width: 100%;height: 500px;margin: auto;" />
+        <img onclick="Next()" style="position: absolute;top:265px;right: 170px;" />
+        <img onclick="Back()" style="position: absolute;top:265px;left: 175px" />
+    </div>
+    <div class="btn-slides">
+        <input class="btn-slide prev" type="button" value="&#10092;">
+        <input class="btn-slide next" type="button" value="&#10093;">
+    </div>
+</div>
+<div id="content" ng-app="CustomerApp">
+    <div id="main">
+        @*<div>
+            <div class=head style="width: 100%;height: 55px; display: flex;">
+                <h2 style="text-align: left;height: 80px;width: 250px;">Sản phẩm nổi bật</h2>
+                <div class="sort" style="height: 55px;width: 150px;padding-top: 15px;padding-left: 740px;">
+                    <select ng-model="sortcolumn" class="form-control">
+                        <option value="TenSP">Tên Sản phẩm</option>
+                        <option value="MaSP" selected="selected">Mã Sản phẩm</option>
+                        <option value="GiaBan" selected="selected">Giá bán</option>
+                    </select>
+                </div>
+                <div>
+                    Sorting direction:
+                    <input type="button" value="{{direct}}" ng-click="Chon(direct)" class="btn btn-info" />
+                </div>
+            </div>
+        </div>*@
+        <div class="list-product" ng-controller="SPController">
+            <div class="col-3 col-m-6 col-s-12"  dir-paginate="s in 
+ListSanPham.SanPhams|orderBy:sortcolumn:reverse|itemsPerPage:pageSize" total-items="totalCount"
+id="tr_{{s.MaSP}}">
+                    <a ng-click="SelectSanPham(sp.MaSP)" href="/ChiTietSP/Index">
+                        <img class="product-img" src="https://picsum.photos/200/300" />
+                    </a>
+                    <a href="#" class="product-name">{{s.TenSp}}</a>
+                    <input type='button' class='btn-buy' value='CHỌN MUA' />
+                    <input type="button" class="btn-view" value="CHI TIẾT"
+                           onclick="location='./ProductDetail.html'" />
+                </div>
+            </div>
+        </div>
+        <div class=" pagination sortPagiBar">
+            <dir-pagination-controls max-size="maxSize"
+                                     direction-links="true"
+                                     boundary-links="true"
+                                     on-page-change="GetSanPhams(newPageNumber)">
+            </dir-pagination-controls>
+        </div>
+
+
+
+        <div style="clear: both"></div>
+        @*<div class="pagination">
+            <p>without gradient</p>
+            <a href="#" class="page">first</a><a href="#" class="page">2</a><a href="#" class="page">3</a><span class="page active">4</span><a href="#" class="page">5</a><a href="#" class="page">6</a><a href="#"
+                                                                                                                                                                                                           class="page">last</a>
+        </div>*@
+    </div>
+
